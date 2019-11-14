@@ -10,7 +10,6 @@
 		E9513B5F2375DA2F007C322E /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9513B5D2375DA2E007C322E /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E9513B602375DA2F007C322E /* CocoaMQTT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9513B5E2375DA2E007C322E /* CocoaMQTT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E9835CD02379CB9A00C5CEA2 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9835CCF2379CB9A00C5CEA2 /* Score.swift */; };
-		E9835CD22379CBD300C5CEA2 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9835CD12379CBD300C5CEA2 /* MenuItemView.swift */; };
 		E9835CD42379D74300C5CEA2 /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9835CD32379D74300C5CEA2 /* Updater.swift */; };
 		E9A37FE023748090000527B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A37FDF23748090000527B4 /* AppDelegate.swift */; };
 		E9A37FE423748092000527B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A37FE323748092000527B4 /* Assets.xcassets */; };
@@ -37,7 +36,6 @@
 		E9513B5D2375DA2E007C322E /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		E9513B5E2375DA2E007C322E /* CocoaMQTT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaMQTT.framework; path = Carthage/Build/Mac/CocoaMQTT.framework; sourceTree = "<group>"; };
 		E9835CCF2379CB9A00C5CEA2 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
-		E9835CD12379CBD300C5CEA2 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		E9835CD32379D74300C5CEA2 /* Updater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updater.swift; sourceTree = "<group>"; };
 		E9A37FDC23748090000527B4 /* hkick-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hkick-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A37FDF23748090000527B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				E9A37FDF23748090000527B4 /* AppDelegate.swift */,
-				E9835CD12379CBD300C5CEA2 /* MenuItemView.swift */,
 				E9835CCF2379CB9A00C5CEA2 /* Score.swift */,
 				E9835CD32379D74300C5CEA2 /* Updater.swift */,
 				E9A37FE323748092000527B4 /* Assets.xcassets */,
@@ -185,7 +182,6 @@
 			files = (
 				E9835CD02379CB9A00C5CEA2 /* Score.swift in Sources */,
 				E9835CD42379D74300C5CEA2 /* Updater.swift in Sources */,
-				E9835CD22379CBD300C5CEA2 /* MenuItemView.swift in Sources */,
 				E9A37FE023748090000527B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

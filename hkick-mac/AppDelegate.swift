@@ -1,12 +1,15 @@
 import Cocoa
 
+extension NSImage.Name {
+    static let menuBarIcon = NSImage.Name("MenuBarIcon")
+}
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     private let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     private let updater = Updater()
     private let whiteItem = NSMenuItem()
     private let redItem = NSMenuItem()
-    private let menuItemView = MenuItemView()
 
     private var score = Score(red: 0, white: 0) {
         didSet {
@@ -15,15 +18,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        self.menuItemView.translatesAutoresizingMaskIntoConstraints = false
-        self.statusItem.button!.addSubview(self.menuItemView)
-
-        NSLayoutConstraint.activate([
-            self.menuItemView.leadingAnchor.constraint(equalTo: self.statusItem.button!.leadingAnchor),
-            self.menuItemView.trailingAnchor.constraint(equalTo: self.statusItem.button!.trailingAnchor),
-            self.menuItemView.topAnchor.constraint(equalTo: self.statusItem.button!.topAnchor),
-            self.menuItemView.bottomAnchor.constraint(equalTo: self.statusItem.button!.bottomAnchor),
-        ])
+        self.statusItem.button!.image = NSImage(named: .menuBarIcon)
+        self.statusItem.button!.imageHugsTitle = true
+        self.statusItem.button!.imagePosition = .imageLeft
+        self.statusItem.button!.imageScaling = .scaleProportionallyDown
 
         let quitItem = NSMenuItem()
         quitItem.title = "Quit HKick"
@@ -51,8 +49,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func updateScore() {
-        self.menuItemView.score = self.score
         self.whiteItem.title = "White:\t\(self.score.white)"
         self.redItem.title = "Red:\t\(self.score.red)"
+
+        self.statusItem.button!.attributedTitle = NSAttributedString(
+            string: "\(self.score.white):\(self.score.red)",
+            attributes: [NSAttributedString.Key.baselineOffset: -1/NSScreen.main!.backingScaleFactor,
+                         NSAttributedString.Key.paragraphStyle: {
+                            let paragraphStyle = NSMutableParagraphStyle()
+                            paragraphStyle.firstLineHeadIndent = 2/NSScreen.main!.backingScaleFactor
+                            return paragraphStyle
+                         }()])
     }
 }

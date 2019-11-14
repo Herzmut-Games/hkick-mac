@@ -1,8 +1,14 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "filename" : "football.pdf"
+      "idiom" : "mac",
+      "filename" : "football 1.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "mac",
+      "filename" : "football 1@2x.png",
+      "scale" : "2x"
     }
   ],
   "info" : {
